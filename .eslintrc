@@ -17,6 +17,6 @@
     "no-console": "warn",
     "no-eval": "error",
     "import/first": "error",
-    // Add React-specific rules here if needed
+    "no-unused-vars": "off"
   }
 }
