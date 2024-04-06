@@ -4,19 +4,27 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["import", "react"], // Added "react" plugin
-  "extends": "eslint:recommended",
+  "plugins": ["import", "react", "@typescript-eslint"], // Add "@typescript-eslint" plugin
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended" // Add TypeScript recommended rules
+  ],
+  "parser": "@typescript-eslint/parser", // Use TypeScript parser
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true // Enable JSX parsing
-    }
+    },
+    "project": "./tsconfig.json", // Path to your tsconfig.json file
+    "tsconfigRootDir": "."
   },
   "rules": {
     "no-console": "warn",
     "no-eval": "error",
     "import/first": "error",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off" // Disable rule from TypeScript plugin, since you're overriding it globally
   }
 }
