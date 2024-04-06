@@ -33,18 +33,18 @@
   }
   :root[data-theme="light"]{
     --color-bg1: 210deg 26% 62%;
-    --color-bg2:  54deg 11% 85%;
+    --color-bg2:  210deg 26% 85%;
     --color-pri1: 212deg 67% 15%;
-    --color-pri2: 9deg 100% 64%;
-    --color-accent1: 90deg 20% 94%;
-    --color-accent2: 38deg 100% 53%;
+    --color-pri2: 0deg 100% 0%;
+    --color-accent1: 38deg 100% 53%;
+    --color-accent2: 189deg 95% 55%;
   }
   :root[data-theme="dark"]{
     --color-bg1: 212deg 67% 15%;
     --color-bg2: 212deg 67% 5%;
     --color-pri1: 201deg 90% 64%;
-    --color-pri2: 9deg 100% 64%;
-    --color-accent1: 90deg 20% 94%;
+    --color-pri2: 0deg 100% 100%;
+    --color-accent1: 188deg 93% 59%;
     --color-accent2: 38deg 100% 53%;
   }
 }

@@ -24,7 +24,7 @@ export const ToggleTheme: React.FC<ToggleThemeProps> = ({
       onChange={handleThemeChange}
       size="lg"
       classNames={{
-        wrapper: cn("group-data-[selected=true]:bg-accent-2"),
+        wrapper: cn("group-data-[selected=true]:bg-accent-1"),
       }}
       endContent={<MoonIcon />}
       startContent={<SunIcon />}
