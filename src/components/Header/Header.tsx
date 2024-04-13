@@ -11,7 +11,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme, currentTheme }) => 
   const navBrandStyle = "text-pri-1 text-4xl"
 
   return (
-    <Navbar className={"bg-bg-1 justify-around"} maxWidth="full">
+    <Navbar className={"bg-bg-1"} maxWidth="full">
       <NavbarBrand className={"backdrop-blur-3xl"}>
         <Image
           key={1}
