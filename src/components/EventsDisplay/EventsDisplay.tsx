@@ -1,7 +1,7 @@
 import { Card, CardBody, CardHeader } from "@nextui-org/react"
 import React, { useEffect } from "react"
 import { startOfMonth } from "date-fns"
-import { getCalendarData } from "../Calendar/data"
+import { getCalendarData } from "./data"
 import { EventRow } from "./EventRow/EventRow"
 import { UpcomingEvents } from "./UpcomingEvents/UpcomingEvents"
 import { EventDetails } from "./EventDetails/EventDetails"

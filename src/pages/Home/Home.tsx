@@ -12,7 +12,6 @@ import { Line } from "../../components/Line/Line"
 import { HeroCard } from "../../components/HeroCard/HeroCard"
 import { ContactArea } from "../../components/ContactArea/ContactArea"
 import { Carousel } from "../../components/Carousel/Carousel"
-import { Calendar } from "../../components/Calendar/Calendar"
 import { SponsorsRow } from "../../components/SponsorsRow/SponsorsRow"
 import { EventsDisplay } from "../../components/EventsDisplay/EventsDisplay"
 
