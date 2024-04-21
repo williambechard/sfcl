@@ -1,11 +1,7 @@
 import React from "react"
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules"
-
 import { Image } from "@nextui-org/react"
-
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
@@ -30,12 +26,11 @@ export const Carousel = () => {
         </SwiperSlide>,
       )
     })
-
     return slides
   }
 
   return (
-    <div className={"pb-2"}>
+    <div className={"pb-6 flex-row justify-between align-middle"}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}

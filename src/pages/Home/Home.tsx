@@ -12,6 +12,9 @@ import { Line } from "../../components/Line/Line"
 import { HeroCard } from "../../components/HeroCard/HeroCard"
 import { ContactArea } from "../../components/ContactArea/ContactArea"
 import { Carousel } from "../../components/Carousel/Carousel"
+import { Calendar } from "../../components/Calendar/Calendar"
+import { SponsorsRow } from "../../components/SponsorsRow/SponsorsRow"
+import { EventsDisplay } from "../../components/EventsDisplay/EventsDisplay"
 
 export const Home = () => {
   const cardStyles = "bg-secondary"
@@ -29,7 +32,16 @@ export const Home = () => {
         src="/assets/images/CLSPC.jpg"
         src_alt="clspc-image"
       />
-      <ContactArea />
+      <SponsorsRow />
+
+      <Card
+        className="flex-row justify-center py-2 rounded-none bg-gradient-to-r from-bg-1 to-bg-2"
+        isBlurred
+      >
+        <CardBody className={"rounded-none flex-row justify-center "}>
+          <EventsDisplay />
+        </CardBody>
+      </Card>
       <div className="flex flex-row justify-center p-2">
         <h1 className="text-medium italic font-thin text-pri-2">
           Join us as we develop games and apps. A sample of submissions can be viewed
@@ -37,6 +49,7 @@ export const Home = () => {
         </h1>
       </div>
       <Carousel />
+      <ContactArea />
     </div>
   )
 }

@@ -10,6 +10,7 @@ module.exports = {
     "./src/*.{html,js,ts,tsx}",
     "./src/*.{html,js, ts, tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "node_modules/@zach.codes/react-calendar/dist/**/*.js",
   ],
   theme: {
     extend: {

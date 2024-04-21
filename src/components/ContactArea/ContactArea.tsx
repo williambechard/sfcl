@@ -1,5 +1,6 @@
 import { Button, Card, CardBody } from "@nextui-org/react"
 import React from "react"
+import { AdminButton } from "../AdminButton/AdminButton"
 
 export const ContactArea: React.FC = () => {
   return (
@@ -8,10 +9,13 @@ export const ContactArea: React.FC = () => {
       isBlurred
     >
       <CardBody>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <Button className={"bg-accent-2 border-1.5 border-pri-2 shadow"}>
             <p className="text-pri-2 text-2xl italic">Contact Us</p>
           </Button>
+        </div>
+        <div className="absolute mr-4 right-0">
+          <AdminButton />
         </div>
       </CardBody>
     </Card>

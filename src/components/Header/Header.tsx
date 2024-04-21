@@ -1,6 +1,7 @@
 import { Image, Link, Navbar, NavbarBrand } from "@nextui-org/react"
 import { ToggleTheme } from "../ToggleTheme/ToggleTheme"
 import React from "react"
+import { AdminButton } from "../AdminButton/AdminButton"
 
 interface HeaderProps {
   toggleTheme: () => void

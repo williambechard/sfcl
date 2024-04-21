@@ -2,6 +2,7 @@ import React from "react"
 import { NextUIProvider } from "@nextui-org/react"
 import { Header } from "./components/Header/Header"
 import { NavRoutes } from "./navigation/Routes"
+import { supabase } from "./db/supabaseClient"
 
 interface AppProps {
   toggleTheme: () => void

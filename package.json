@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@nextui-org/react": "^2.2.10",
+    "@nextui-org/react": "^2.3.5",
+    "@supabase/supabase-js": "^2.42.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,9 +12,12 @@
     "@types/node": "^16.18.93",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
+    "@zach.codes/react-calendar": "^0.3.3",
+    "date-fns": "^3.6.0",
     "framer-motion": "^11.0.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-infinite-calendar": "^2.3.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "swiper": "^11.1.1",
@@ -45,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-infinite-calendar": "^2.3.9",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "eslint": "^8.57.0",
