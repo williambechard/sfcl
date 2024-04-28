@@ -5,7 +5,7 @@ import { AdminButton } from "../AdminButton/AdminButton"
 export const ContactArea: React.FC = () => {
   return (
     <Card
-      className="flex-row justify-center   py-2 rounded-none h-unit-20 bg-gradient-to-r from-bg-2 to-bg-1"
+      className="flex-row justify-center   py-2 rounded-none h-unit-20 bg-gradient-to-r from-bg-2 to-bg-1 p-6"
       isBlurred
     >
       <CardBody>
@@ -13,9 +13,6 @@ export const ContactArea: React.FC = () => {
           <Button className={"bg-accent-2 border-1.5 border-pri-2 shadow"}>
             <p className="text-pri-2 text-2xl italic">Contact Us</p>
           </Button>
-        </div>
-        <div className="absolute mr-4 right-0">
-          <AdminButton />
         </div>
       </CardBody>
     </Card>

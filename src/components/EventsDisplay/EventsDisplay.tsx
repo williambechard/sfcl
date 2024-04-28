@@ -14,6 +14,7 @@ export type Event = {
   remote: boolean
   location: string
   details: string
+  id: string
 }
 
 export const EventsDisplay = () => {
@@ -33,9 +34,16 @@ export const EventsDisplay = () => {
   }, [])
 
   return (
-    <div className="w-full flex justify-around gap-x-4 h-70">
-      <UpcomingEvents events={events} error={error} />
+    <div className="p-6 grid lg:grid-cols-2 gap-6">
+      <UpcomingEvents
+        events={events}
+        error={error}
+        setSelectedEvent={setEventSelected}
+      />
       {eventSelected && <EventDetails event={eventSelected} />}
     </div>
   )
 }
+/*
+
+ */

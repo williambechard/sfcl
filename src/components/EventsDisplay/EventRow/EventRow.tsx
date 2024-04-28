@@ -1,6 +1,7 @@
 import { Card, CardBody, DatePicker, DateValue, Image } from "@nextui-org/react"
 import React from "react"
 import { dateConverter } from "./data"
+import { Event } from "../EventsDisplay"
 
 interface EventRowProps {
   title: string
@@ -9,6 +10,8 @@ interface EventRowProps {
   isRemote: boolean
   isActiveDutyOnly: boolean
   isBeginner: boolean
+  setSelectedEvent: any
+  event: Event
 }
 
 export const EventRow: React.FC<EventRowProps> = ({
@@ -18,13 +21,23 @@ export const EventRow: React.FC<EventRowProps> = ({
   isRemote,
   isActiveDutyOnly,
   isBeginner,
+  setSelectedEvent,
+  event,
 }) => {
   const dateTime = dateConverter(date)
   const h = "26px"
   const w = "26px"
 
+  const mouseEnter = () => {
+    console.log("onpress")
+    setSelectedEvent(event)
+  }
+
   return (
-    <Card className="rounded-none h-unit-12 hover:bg-bg-1 hover:cursor-pointer">
+    <Card
+      className="rounded-none h-unit-12 hover:bg-bg-1 hover:cursor-pointer"
+      onMouseDown={mouseEnter}
+    >
       <CardBody>
         <div className="grid grid-cols-3 w-full gap-4">
           <div className="inline-flex">

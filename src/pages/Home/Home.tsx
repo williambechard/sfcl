@@ -32,16 +32,15 @@ export const Home = () => {
         src_alt="clspc-image"
       />
       <SponsorsRow />
-
       <Card
-        className="flex-row justify-center py-2 rounded-none bg-gradient-to-r from-bg-1 to-bg-2"
+        className="flex-row justify-center py-6 rounded-none bg-gradient-to-r from-bg-1 to-bg-2"
         isBlurred
       >
         <CardBody className={"rounded-none flex-row justify-center "}>
           <EventsDisplay />
         </CardBody>
       </Card>
-      <div className="flex flex-row justify-center p-2">
+      <div className="flex flex-row justify-center p-6">
         <h1 className="text-medium italic font-thin text-pri-2">
           Join us as we develop games and apps. A sample of submissions can be viewed
           below.

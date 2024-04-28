@@ -12,12 +12,14 @@ export const Carousel = () => {
     //@ts-expect-error issue with context type
     const images = require.context("../../../public/assets/images/games/2024", true)
     images.keys().forEach((image: any) => {
+      const imageName = image.split("/")[1]
+
       slides.push(
-        <SwiperSlide key={image.name} className={"m-auto"}>
-          <div className={"flex-row justify-center  rounded-2xl w-full"}>
+        <SwiperSlide key={imageName} className={"m-auto"}>
+          <div className={"flex-row justify-center rounded-2xl w-full"}>
             <Image
               src={images(image)}
-              alt={image.name + "_image"}
+              alt={imageName + "_image"}
               isBlurred
               width={600}
               height={100}

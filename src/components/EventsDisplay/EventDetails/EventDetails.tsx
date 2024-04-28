@@ -12,13 +12,13 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ event }) => {
   const dateTime: string = dateConverter(event["date-time"] as unknown as DateValue)
 
   return (
-    <Card className="w-1/2">
+    <Card className="p-2">
       <CardHeader className="justify-center text-pri-2 font-extrabold underline">
         Details
       </CardHeader>
       <CardBody className="flex-col justify-center">
         <div className="flex-col h-full">
-          <div className={"flex w-full justify-between"}>
+          <div className={"flex justify-between"}>
             <div className={"inline-flex text-sm"}>
               <span className={"text-pri-1 mr-1"}>Event:</span> {name}
             </div>
@@ -27,7 +27,7 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ event }) => {
           <div className={"inline-flex text-sm"}>
             <span className={"text-pri-1 mr-1"}>Location:</span> {location}
           </div>
-          <div className={"flex-grow p-2 text-xs italic"}>{details}</div>
+          <div className={"p-2 text-xs italic"}>{details}</div>
         </div>
       </CardBody>
     </Card>
