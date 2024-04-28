@@ -1,6 +1,6 @@
 import React from "react"
 import { NextUIProvider } from "@nextui-org/react"
-import { Header } from "./components/Header/Header"
+import { NavHeader } from "./components/NavHeader/NavHeader"
 import { NavRoutes } from "./navigation/Routes"
 import { supabase } from "./db/supabaseClient"
 
@@ -12,7 +12,7 @@ interface AppProps {
 const App: React.FC<AppProps> = ({ toggleTheme, currentTheme }) => {
   return (
     <NextUIProvider>
-      <Header toggleTheme={toggleTheme} currentTheme={currentTheme} />
+      <NavHeader toggleTheme={toggleTheme} currentTheme={currentTheme} />
       <NavRoutes />
     </NextUIProvider>
   )
