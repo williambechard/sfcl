@@ -29,7 +29,6 @@ export const EventRow: React.FC<EventRowProps> = ({
   const w = "26px"
 
   const mouseEnter = () => {
-    console.log("onpress")
     setSelectedEvent(event)
   }
 

@@ -16,7 +16,6 @@ const RootComponent = () => {
       : "light",
   )
   const changeTheme = (target: string) => {
-    console.log("changing theme to ", target)
     setTheme(target)
     // Update the data-theme attribute on the root HTML element
     document.documentElement.setAttribute("data-theme", target)
