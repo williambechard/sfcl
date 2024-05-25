@@ -1,10 +1,10 @@
-import React, { StrictMode, useEffect, useState } from "react"
+import React, { createContext, StrictMode, useEffect, useState } from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter } from "react-router-dom"
-import events from "node:events"
+import { ThemeContext } from "./hooks/useTheme"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
@@ -29,7 +29,6 @@ const RootComponent = () => {
 
     const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)")
     const handleChange = (e: any) => {
-      console.log("e.matches  ", e.matches)
       setTheme(e.matches ? "dark" : "light")
     }
 
@@ -44,12 +43,14 @@ const RootComponent = () => {
   }
 
   return (
-    <StrictMode>
-      <BrowserRouter>
-        {/* Pass toggleTheme function and current theme as props to App component */}
-        <App toggleTheme={toggleTheme} currentTheme={theme} />
-      </BrowserRouter>
-    </StrictMode>
+    <ThemeContext.Provider value={theme}>
+      <StrictMode>
+        <BrowserRouter>
+          {/* Pass toggleTheme function and current theme as props to App component */}
+          <App toggleTheme={toggleTheme} currentTheme={theme} />
+        </BrowserRouter>
+      </StrictMode>
+    </ThemeContext.Provider>
   )
 }
 
