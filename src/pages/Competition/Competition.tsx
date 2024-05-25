@@ -1,5 +1,5 @@
 import { CardRow } from "../../components/CardRow/CardRow"
-import { Leaderboard } from "../../components/Leaderboard/Leaderboard"
+// import { Leaderboard } from "../../components/Leaderboard/Leaderboard"
 import { TeamTable } from "../../components/TeamTable/TeamTable"
 
 export const Competition = () => {
@@ -16,9 +16,7 @@ export const Competition = () => {
         </div>
       </CardRow>
       <div className="flex justify-evenly p-6 h-screen w-full">
-        <div className={"w-1/3 p-2"}>
-          <Leaderboard />
-        </div>
+        <div className={"w-1/3 p-2"}></div>
         <div className={"flex-grow p-2"}>
           <TeamTable />
         </div>

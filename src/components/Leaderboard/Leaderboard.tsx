@@ -1,4 +1,12 @@
+import React from "react"
+
+const Leaderboard = () => {
+  return null
+}
+
+/*
 import { Card, CardBody, Tab, Tabs } from "@nextui-org/react"
+
 import { CardRow } from "../../components/CardRow/CardRow"
 import {
   XYPlot,
@@ -89,7 +97,7 @@ export const Leaderboard = () => {
   )
 }
 
-/*
+
   <XYPlot height={400} width={800}>
                     <VerticalBarSeries data={data} barWidth={0.75} />
                   </XYPlot>
