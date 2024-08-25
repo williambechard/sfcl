@@ -1,26 +1,38 @@
 import { CardRow } from "../../components/CardRow/CardRow"
 // import { Leaderboard } from "../../components/Leaderboard/Leaderboard"
 import { TeamTable } from "../../components/TeamTable/TeamTable"
+import React, { useEffect, useState } from "react"
+import { Event } from "../../components/EventsDisplay/EventsDisplay"
+import { getCompetitionData } from "./getCompetitionData"
+import CompetitionTabs from "./CompetitionTabs/CompetitionTabs"
+import { Card } from "@nextui-org/react"
 
 export const Competition = () => {
+  const [competitionData, setCompetitionData] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchCompetitionData = async () => {
+      const { data, error } = await getCompetitionData()
+      if (!error) {
+        setCompetitionData(data)
+        setLoading(false)
+        console.log("data ", data)
+      } else {
+        console.error("Error fetching competition data:", error)
+      }
+    }
+
+    fetchCompetitionData()
+  }, [])
+
+  if (loading) return <p>Loading...</p>
+
   return (
-    <div className="bg-bg-2">
-      <CardRow>
-        <div>
-          <p className={"text-pri-1 text-xl font-extrabold"}>
-            Space Force Creator's League 2024 Competition
-          </p>
-          <p className="text-pri-2 text-xl font-extrabold transform translate-x-[2px] -translate-y-[26px]">
-            Space Force Creator's League 2024 Competition
-          </p>
-        </div>
-      </CardRow>
-      <div className="flex justify-evenly p-6 h-screen w-full">
-        <div className={"w-1/3 p-2"}></div>
-        <div className={"flex-grow p-2"}>
-          <TeamTable />
-        </div>
-      </div>
+    <div className="bg-bg-2 flex-col" style={{ height: "93.6%" }}>
+      <Card className="flex-grow p-8 rounded-none">
+        <CompetitionTabs competitionData={competitionData} />
+      </Card>
     </div>
   )
 }

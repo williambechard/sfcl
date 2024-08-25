@@ -36,8 +36,8 @@
     --color-bg2:  210deg 26% 85%;
     --color-pri1: 212deg 67% 15%;
     --color-pri2: 0deg 100% 0%;
-    --color-accent1: 38deg 100% 53%;
-    --color-accent2: 189deg 95% 55%;
+    --color-accent1: 199deg 56% 25%;
+    --color-accent2: 34deg 83% 34%;
   }
   :root[data-theme="dark"]{
     --color-bg1: 212deg 67% 15%;

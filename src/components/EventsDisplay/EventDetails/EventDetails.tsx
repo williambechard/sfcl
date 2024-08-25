@@ -12,7 +12,7 @@ export const EventDetails: React.FC<EventDetailsProps> = ({ event }) => {
   const dateTime: string = dateConverter(event["date-time"] as unknown as DateValue)
 
   return (
-    <Card className="p-2">
+    <Card className="p-2 bg-bg-2">
       <CardHeader className="justify-center text-pri-2 font-extrabold underline">
         Details
       </CardHeader>

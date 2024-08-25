@@ -57,7 +57,7 @@ export const UpcomingEvents: React.FC<UpcomingEventsProps> = ({
   }
 
   return (
-    <Card className="p-2">
+    <Card className="p-2 bg-bg-2">
       <CardHeader className="justify-center text-pri-1 font-bold text-xl">
         Upcoming Events
       </CardHeader>
